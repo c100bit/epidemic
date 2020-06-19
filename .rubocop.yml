@@ -1,0 +1,87 @@
+inherit_gem:
+  rubocops:
+    - 'config/default.yml'
+
+Layout/EmptyLinesAroundClassBody:
+  EnforcedStyle: empty_lines
+
+Layout/SpaceInLambdaLiteral:
+  EnforcedStyle: require_space
+
+Metrics/BlockLength:
+  Max: 31
+
+Layout/LineLength:
+  Max: 217
+
+Metrics/MethodLength:
+  Max: 26
+
+Metrics/AbcSize:
+  Enabled: false
+
+Metrics/CyclomaticComplexity:
+  Max: 11
+
+Metrics/PerceivedComplexity:
+  Max: 11
+
+Style/IfUnlessModifier:
+  Enabled: false
+
+Style/TrailingCommaInArrayLiteral:
+  EnforcedStyleForMultiline: comma
+
+Style/EmptyCaseCondition:
+  Enabled: false
+
+RSpec/MessageSpies:
+  EnforcedStyle: receive
+
+RSpec/ExampleLength:
+  Max: 14
+
+RSpec/MultipleExpectations:
+  Max: 10
+
+Rails/ReflectionClassName:
+  Enabled: false
+
+Rails/ApplicationRecord:
+  Enabled: false
+
+Rails/UnknownEnv:
+  Environments:
+    - test
+    - development
+    - staging
+    - production
+
+Style/MultilineBlockChain:
+  Enabled: false
+
+Style/Encoding:
+  Enabled: false
+
+RSpec/ScatteredLet:
+  Enabled: false
+
+RSpec/EmptyLineAfterFinalLet:
+  Enabled: false
+
+Rails/SkipsModelValidations:
+  Enabled: false
+
+Rails/LexicallyScopedActionFilter:
+  Enabled: false
+
+# Нормальное имя для ошибок
+Naming/RescuedExceptionsVariableName:
+  Enabled: false
+
+Rails/RakeEnvironment:
+  Enabled: false
+
+AllCops:
+  Exclude:
+    - 'db/postgres_schema.rb'

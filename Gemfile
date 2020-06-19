@@ -17,6 +17,20 @@ gem 'webpacker', '~> 4.0'
 gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.7'
+
+gem 'activeadmin', '~> 2.7.0'
+gem 'cancancan'
+gem 'devise'
+gem 'devise-i18n'
+gem 'sidekiq'
+
+gem 'graphql'
+gem 'mini_magick'
+gem 'aws-sdk-s3', require: false
+gem 'graphql_devise'
+
+gem 'rs_russian', github: 'rs-pro/russian', branch: 'master'
+
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
@@ -44,3 +58,5 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+gem 'graphiql-rails', group: :development
