@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_06_20_011455) do
+ActiveRecord::Schema.define(version: 2020_06_20_220557) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -70,6 +70,14 @@ ActiveRecord::Schema.define(version: 2020_06_20_011455) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "notices", force: :cascade do |t|
+    t.string "title", null: false
+    t.bigint "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_notices_on_user_id"
+  end
+
   create_table "pages", force: :cascade do |t|
     t.string "name", null: false
     t.string "title", null: false
@@ -109,6 +117,14 @@ ActiveRecord::Schema.define(version: 2020_06_20_011455) do
     t.index ["unlock_token"], name: "index_users_on_unlock_token", unique: true
   end
 
+  create_table "vaccination_calendars", force: :cascade do |t|
+    t.date "start_date", null: false
+    t.date "end_date", null: false
+    t.string "title", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "vaccination_places", force: :cascade do |t|
     t.string "title", null: false
     t.text "description"
@@ -124,4 +140,5 @@ ActiveRecord::Schema.define(version: 2020_06_20_011455) do
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "notices", "users"
 end

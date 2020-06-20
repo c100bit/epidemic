@@ -9,5 +9,7 @@ module Types
     field :phone, String, null: false
     field :address, String, null: false
 
+    field :notices, [NoticeType], null: false
+
   end
 end

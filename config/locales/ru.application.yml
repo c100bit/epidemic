@@ -1,6 +1,20 @@
 ru:
+  formtastic:
+    yes: Да
+    no: Нет
+    create: Создать %{model}
+    update: Обновить %{model}
+    submit: Сохранить %{model}
+    cancel: Отменить %{model}
+    reset: Обнулить %{model}
+    required: обязательно
   activerecord:
     models:
+      vaccination_calendar:
+        one: Календарь вакцинации
+        other: Календарь вакцинации
+        few: Календарь вакцинации
+        many: Календарь вакцинации
       news:
         one: Новость
         other: Новости
@@ -56,6 +70,13 @@ ru:
         worktime: Время работы
         lat: Широта
         long: Долгота
+        created_at: Дата создания
+        updated_at: Дата обновления
+      vaccination_calendar:
+        id: №
+        start_date: Дата начала вакцинации
+        end_date: Дата окончания вакцинации
+        title: Вакцинация
         created_at: Дата создания
         updated_at: Дата обновления
       admin_user:

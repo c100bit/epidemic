@@ -6,6 +6,7 @@ module Root
     field :news_list, [Types::NewsType], null: false
     field :pages, [Types::PageType], null: false
     field :vaccination_places, [Types::VaccinationPlaceType], null: false
+    field :vaccination_calendars, [Types::VaccinationCalendarType], null: false
 
     field :page, Types::PageType, null: false do
       argument :id, ID, required: true
@@ -17,6 +18,14 @@ module Root
 
     field :vaccination_place, Types::VaccinationPlaceType, null: false do
       argument :id, ID, required: true
+    end
+
+    field :user, Types::UserType, null: false do
+      argument :id, ID, required: true
+    end
+
+    def user(id:)
+      User.find(id)
     end
 
     def page(id:)
@@ -41,6 +50,10 @@ module Root
 
     def vaccination_places
       VaccinationPlace.all
+    end
+
+    def vaccination_calendars
+      VaccinationCalendar.all
     end
 
   end

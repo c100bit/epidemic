@@ -5,3 +5,5 @@ Seeds::News.create!
 Seeds::VaccinationPlaces.create!
 Seeds::Pages.create!
 Seeds::Comments.create!
+Seeds::VaccinationCalendars.create!
+Seeds::Notices.create!
