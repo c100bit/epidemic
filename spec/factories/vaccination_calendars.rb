@@ -1,8 +1,8 @@
 FactoryBot.define do
   factory :vaccination_calendar do
-    start_date { "2020-06-21" }
-    end_date { "2020-06-21" }
-    name { "MyString" }
+    start_date { Date.parse('2020-06-21') }
+    end_date { Date.parse('2020-06-21') }
+    title { 'MyString' }
   end
 end
 
