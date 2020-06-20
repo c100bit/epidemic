@@ -21,38 +21,20 @@ module Seeds
                    password: 'мария@тестовая-зона.рф',
                    password_confirmation: 'мария@тестовая-зона.рф')
 
-      User.create!(email: 'админ@тестовая-зона.рф',
-                   uid: 'админ@тестовая-зона.рф',
-                   first_name: 'Сергей',
-                   last_name: 'Кузьмич',
-                   phone: '9600000002',
-                   address: 'Псков, ул. Тверская, 10',
-                   middle_name: 'Иванович',
-                   password: 'админ@тестовая-зона.рф',
-                   password_confirmation: 'админ@тестовая-зона.рф',
-                   role: User::SUPER_ADMIN)
+      AdminUser.create!(email: 'админ@тестовая-зона.рф',
+                        password: 'админ@тестовая-зона.рф',
+                        password_confirmation: 'админ@тестовая-зона.рф',
+                        role: AdminUser::SUPER_ADMIN)
 
-      User.create!(email: 'организация@тестовая-зона.рф',
-                   uid: 'организация@тестовая-зона.рф',
-                   first_name: 'Дмитрий',
-                   last_name: 'Панов',
-                   phone: '9600000003',
-                   address: 'Екатеринбург, ул. Тверская, 10',
-                   middle_name: 'Арихстархович',
-                   password: 'организация@тестовая-зона.рф',
-                   password_confirmation: 'организация@тестовая-зона.рф',
-                   role: User::ADMIN)
+      AdminUser.create!(email: 'организация@тестовая-зона.рф',
+                        password: 'организация@тестовая-зона.рф',
+                        password_confirmation: 'организация@тестовая-зона.рф',
+                        role: AdminUser::ADMIN)
 
-      User.create!(email: 'c100bit@gmail.com',
-                   uid: 'c100bit@gmail.com',
-                   first_name: 'Иван',
-                   last_name: 'Иванов',
-                   phone: '9600000004',
-                   address: 'Санта-Моника, ул. Тверская, 10',
-                   middle_name: 'Петрович',
-                   password: 'P@$$w0rd',
-                   password_confirmation: 'P@$$w0rd',
-                   role: User::SUPER_ADMIN)
+      AdminUser.create!(email: 'c100bit@gmail.com',
+                        password: 'P@$$w0rd',
+                        password_confirmation: 'P@$$w0rd',
+                        role: AdminUser::SUPER_ADMIN)
     end
   end
 end

@@ -175,10 +175,10 @@ GEM
       railties
       sprockets-rails
     graphql (1.10.6)
-    graphql_devise (0.11.0)
-      devise_token_auth (>= 0.1.43)
-      graphql (>= 1.8)
-      rails (>= 4.2)
+    graphql_devise (0.12.2)
+      devise_token_auth (>= 0.1.43, < 2.0)
+      graphql (>= 1.8, < 1.11.0)
+      rails (>= 4.2, < 6.2)
     has_scope (0.7.2)
       actionpack (>= 4.1)
       activesupport (>= 4.1)
@@ -360,7 +360,6 @@ DEPENDENCIES
   spring
   spring-watcher-listen (~> 2.0.0)
   turbolinks (~> 5)
-  tzinfo-data
   web-console (>= 3.3.0)
   webpacker (~> 4.0)
 

@@ -20,8 +20,6 @@
 #  remember_created_at    :datetime
 #  reset_password_sent_at :datetime
 #  reset_password_token   :string
-#  role                   :string
-#  string                 :string
 #  tokens                 :json
 #  uid                    :string           default(""), not null
 #  unconfirmed_email      :string
@@ -44,8 +42,7 @@ class User < ApplicationRecord
   devise :database_authenticatable,
          :recoverable, :rememberable, :validatable
 
-  ADMIN = 'admin'.freeze
-  SUPER_ADMIN = 'super_admin'.freeze
+  #include GraphqlDevise::Concerns::Model
 
   validates :first_name, presence: true
   validates :last_name, presence: true
@@ -53,13 +50,5 @@ class User < ApplicationRecord
   validates :phone, presence: true
   validates :address, presence: true
   validates :password, presence: true
-
-  def admin?
-    role == ADMIN
-  end
-
-  def super_admin?
-    role == SUPER_ADMIN
-  end
 
 end

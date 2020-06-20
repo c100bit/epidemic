@@ -1,15 +1,10 @@
-ActiveAdmin.register User do
+ActiveAdmin.register AdminUser do
   permit_params :email, :password, :password_confirmation
 
   index do
     selectable_column
     id_column
-    column :first_name
-    column :last_name
-    column :middle_name
     column :email
-    column :phone
-    column :address
     column :current_sign_in_at
     column :sign_in_count
     column :created_at

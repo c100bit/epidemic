@@ -9,7 +9,8 @@ class Ability
 
     if user.super_admin?
       can :manage, :all
-    else
+
+    elsif user.admin?
       can :read, :all
     end
     #
