@@ -25,10 +25,11 @@ gem 'devise-i18n'
 gem 'sidekiq'
 
 gem 'graphql'
+gem 'active_storage_validations'
 gem 'mini_magick'
 gem 'aws-sdk-s3', require: false
 gem 'graphql_devise'
-
+gem 'config'
 gem 'rs_russian', github: 'rs-pro/russian', branch: 'master'
 
 # Use Redis adapter to run Action Cable in production
@@ -53,6 +54,7 @@ group :development do
   gem 'listen', '~> 3.2'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+  gem 'annotate'
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
 

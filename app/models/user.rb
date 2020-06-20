@@ -8,6 +8,13 @@ class User < ApplicationRecord
   ADMIN = 'admin'.freeze
   SUPER_ADMIN = 'super_admin'.freeze
 
+  validates :first_name, presence: true
+  validates :last_name, presence: true
+  validates :email, presence: true
+  validates :phone, presence: true
+  validates :address, presence: true
+  validates :password, presence: true
+
   def admin?
     role == ADMIN
   end

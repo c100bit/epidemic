@@ -1,10 +1,13 @@
-module Mutations
-  class BaseMutation < GraphQL::Schema::RelayClassicMutation
+# frozen_string_literal: true
 
-    argument_class Types::BaseArgument
-    field_class Types::BaseField
-    input_object_class Types::BaseInputObject
-    object_class Types::BaseObject
+module Mutations
+  class BaseMutation < GraphQL::Schema::Mutation
+
+    argument_class Types::Base::Argument
+    field_class Types::Base::Field
+    object_class Types::Base::Object
+
+    field :errors, [String], null: false
 
   end
 end
