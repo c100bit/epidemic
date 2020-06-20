@@ -4,3 +4,4 @@ Seeds::Users.create!
 Seeds::News.create!
 Seeds::VaccinationPlaces.create!
 Seeds::Pages.create!
+Seeds::Comments.create!

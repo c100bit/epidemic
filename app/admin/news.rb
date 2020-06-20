@@ -13,6 +13,12 @@ ActiveAdmin.register News do
   #   permitted << :other if params[:action] == 'create' && current_user.admin?
   #   permitted
   # end
+
+  filter :title
+  filter :description
+  filter :created_at
+  filter :updated_at
+
   form do |f|
     f.inputs do
       f.input :title
