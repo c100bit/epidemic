@@ -12,7 +12,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-             <a class="navbar-brand" href="#"><img src="assets/logo.svg" alt="Logo"></a>
+             <a class="navbar-brand" href="#"><img src="<%= image_path("logo.svg") %>"></a>
 
             </div>
             <div class="collapse navbar-collapse" id="primary_menu">
@@ -37,7 +37,7 @@
             <div class="row">
                 <div class="col-xs-12 hidden-sm col-md-5">
                     <figure class="mobile-image wow fadeInUp" data-wow-delay="0.2s">
-                        <img src="assets/header-mobile.png" alt="">
+                        <img src="<%= image_path("header-mobile.png") %>" alt="">
                     </figure>
                 </div>
                 <div class="col-xs-12 col-md-7">
@@ -60,7 +60,7 @@
             <div class="row">
                 <div class="col-xs-12 col-md-10 col-md-offset-1">
                     <div class="page-title text-center">
-                        <img src="assets/about-logo.svg" alt="About Logo" style='width:65px'>
+                        <img src="<%= image_path("about-logo.svg") %>" alt="About Logo" style='width:65px'>
                         <div class="space-20"></div>
                         <h5 class="title">О нас</h5>
                         <div class="space-30"></div>
@@ -117,7 +117,7 @@
                 </div>
                 <div class="hidden-xs hidden-sm col-md-4">
                     <figure class="mobile-image">
-                        <img src="assets/header-mobile.png" alt="Feature Photo">
+                    <img src="<%= image_path("header-mobile.png") %>">
                     </figure>
                 </div>
                 <div class="col-xs-12 col-sm-6 col-md-4">
@@ -167,42 +167,42 @@
                     <div class="team-slide">
                         <div class="team-box">
                             <div class="team-image">
-                                <img src="assets/team-1.png" alt="">
+                                  <img src="<%= image_path("team-1.png") %>">
                             </div>
                             <h4>Иван Петров</h4>
                             <p>Крутое приложение</p>
                         </div>
                         <div class="team-box">
                             <div class="team-image">
-                                <img src="assets/team-2.jpg" alt="">
+                               <img src="<%= image_path("team-1.png") %>">
                             </div>
                             <h4>Сергей Петров</h4>
                             <p>Молодцы ребята</p>
                         </div>
                         <div class="team-box">
                             <div class="team-image">
-                                <img src="assets/team-3.jpg" alt="">
+                             <img src="<%= image_path("team-1.png") %>">
                             </div>
                             <h4>Раиса Степанова</h4>
                             <p>Лучшее, что я видела</p>
                         </div>
                         <div class="team-box">
                             <div class="team-image">
-                                <img src="assets/team-1.png" alt="">
+                              <img src="<%= image_path("team-1.png") %>">
                             </div>
                             <h4>Сергей Иванов</h4>
                             <p>Очень удобное приложение</p>
                         </div>
                         <div class="team-box">
                             <div class="team-image">
-                                <img src="assets/team-2.jpg" alt="">
+                              <img src="<%= image_path("team-1.png") %>">
                             </div>
                             <h4>Иван Козлов</h4>
                             <p>Мое самое любимое приложение</p>
                         </div>
                         <div class="team-box">
                             <div class="team-image">
-                                <img src="assets/team-3.jpg" alt="">
+                              <img src="<%= image_path("team-1.png") %>">
                             </div>
                             <h4>Анна Иванова</h4>
                             <p>Обязательно сделаю донат</p>
@@ -221,7 +221,7 @@
             <div class="row">
                 <div class="col-xs-12 col-sm-6 hidden-sm">
                     <figure class="mobile-image">
-                        <img src="assets/header-mobile.png" alt="" style='width:300px'>
+                        <img src="<%= image_path("header-mobile.png") %>" style='width:300px'>
                     </figure>
                 </div>
                 <div class="col-xs-12 col-md-6 section-padding">
@@ -229,8 +229,8 @@
                     <div class="space-20"></div>
                     <p>Скачайте приложение бесплатно для вашей платформы</p>
                     <div class="space-60"></div>
-                    <a href="https://www.apple.com" class="bttn-white sq"><img src="assets/apple-icon.png" alt="apple icon"> Apple Store</a>
-                    <a href="https://www.google.com" class="bttn-white sq"><img src="assets/play-store-icon.png" alt="Play Store Icon"> Play Store</a>
+                    <a href="https://www.apple.com" class="bttn-white sq"><img src="<%= image_path("apple-icon.png") %>">Apple Store</a>
+                    <a href="https://www.google.com" class="bttn-white sq"><img src="<%= image_path("play-store-icon.png") %>">Play Store</a>
                 </div>
             </div>
         </div>
@@ -431,16 +431,17 @@
     </footer>
     <!-- Footer-Area-End -->
     <!--Vendor-JS-->
-    <script src="assets/vendor/jquery-1.12.4.min.js"></script>
-    <script src="assets/vendor/jquery-ui.js"></script>
-    <script src="assets/vendor/bootstrap.min.js"></script>
-    <!--Plugin-JS-->
-    <script src="assets/owl.carousel.min.js"></script>
-    <script src="assets/contact-form.js"></script>
-    <script src="assets/ajaxchimp.js"></script>
-    <script src="assets/scrollUp.min.js"></script>
-    <script src="assets/magnific-popup.min.js"></script>
-    <script src="assets/wow.min.js"></script>
-    <!--Main-active-JS-->
-    <script src="assets/main.js"></script>
+    <script src="<%= asset_url('vendor/jquery-1.12.4.min.js')%>"></script>
+    <script src="<%= asset_url('vendor/jquery-ui.js')%>"></script>
+    <script src="<%= asset_url('vendor/bootstrap.min.js')%>"></script>
+    <script src="<%= asset_url('owl.carousel.min.js')%>"></script>
+
+    <script src="<%= asset_url('contact-form.js')%>"></script>
+    <script src="<%= asset_url('ajaxchimp.js')%>"></script>
+    <script src="<%= asset_url('scrollUp.min.js')%>"></script>
+
+    <script src="<%= asset_url('magnific-popup.min.js')%>"></script>
+    <script src="<%= asset_url('wow.min.js')%>"></script>
+    <script src="<%= asset_url('main.js')%>"></script>
+
 </body>

@@ -7,7 +7,8 @@
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-      <script src="assets/vendor/modernizr-2.8.3.min.js"></script>
+
+          <script src="<%= asset_url('vendor/modernizr-2.8.3.min.js')%>"></script>
   </head>
 
     <%= yield %>
