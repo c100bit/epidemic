@@ -119,6 +119,7 @@ Rails.application.configure do
     authentication: :plain,
     user_name: 'epidnet@тестовая-зона.рф',
     password: 'a5f6badce1',
-    enable_starttls_auto: true
+    ssl: true,
+    openssl_verify_mode: 'none'
   }
 end
