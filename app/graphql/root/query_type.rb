@@ -15,7 +15,7 @@ module Root
       argument :id, ID, required: true
     end
 
-    field :vaccination_places, Types::VaccinationPlaceType, null: false do
+    field :vaccination_place, Types::VaccinationPlaceType, null: false do
       argument :id, ID, required: true
     end
 
