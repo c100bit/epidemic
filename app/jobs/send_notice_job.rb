@@ -2,7 +2,7 @@ class SendNoticeJob
 
   include Sidekiq::Worker
 
-  def perform(force: false)
+  def perform(force = false)
     users = User.all
 
     calendars = if force

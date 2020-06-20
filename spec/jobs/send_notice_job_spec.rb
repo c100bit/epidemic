@@ -1,6 +1,6 @@
 describe SendNoticeJob do
   describe '#perform' do
-    subject(:perform) { described_class.new.perform(force: true) }
+    subject(:perform) { described_class.new.perform(true) }
 
     let!(:user) { create(:user) }
     let!(:calendar) { create(:vaccination_calendar) }
