@@ -23,7 +23,7 @@ gem 'cancancan'
 gem 'devise'
 gem 'devise-i18n'
 gem 'sidekiq'
-
+gem 'simpleidn'
 gem 'graphql'
 gem 'active_storage_validations'
 gem 'mini_magick'

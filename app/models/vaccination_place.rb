@@ -23,5 +23,6 @@ class VaccinationPlace < ApplicationRecord
   validates :lat, presence: true
   validates :long, presence: true
   validates :phone, presence: true
+  validates :email, presence: true, email: true
 
 end

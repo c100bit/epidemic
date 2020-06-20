@@ -27,7 +27,7 @@ class AdminUser < ApplicationRecord
   ADMIN = 'admin'.freeze
   SUPER_ADMIN = 'super_admin'.freeze
 
-  validates :email, presence: true
+  validates :email, presence: true, email: true
   validates :password, presence: true
 
   def admin?
