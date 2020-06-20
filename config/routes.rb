@@ -4,8 +4,6 @@ Rails.application.routes.draw do
   devise_for :admin_users, ActiveAdmin::Devise.config
   mount_graphql_devise_for 'User', at: 'auth'
 
-  mount GraphiQL::Rails::Engine, at: '/graphiql', graphql_path: '/graphql'
-
   post '/graphql', to: 'graphql#execute'
   devise_for :users, ActiveAdmin::Devise.config
 
