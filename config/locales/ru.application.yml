@@ -1,4 +1,7 @@
 ru:
+  graphql_devise:
+    sessions:
+      bad_credentials: Неверные логин или пароль
   formtastic:
     yes: Да
     no: Нет
