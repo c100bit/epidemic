@@ -42,14 +42,13 @@ class User < ApplicationRecord
   devise :database_authenticatable,
          :recoverable, :rememberable, :validatable
 
-  # include GraphqlDevise::Concerns::Model
+  include GraphqlDevise::Concerns::Model
 
   validates :first_name, presence: true
   validates :last_name, presence: true
   validates :email, presence: true, email: true
   validates :phone, presence: true
   validates :address, presence: true
-  validates :password, presence: true
 
   has_many :notices
 

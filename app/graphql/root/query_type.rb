@@ -20,12 +20,10 @@ module Root
       argument :id, ID, required: true
     end
 
-    field :user, Types::UserType, null: false do
-      argument :id, ID, required: true
-    end
+    field :user, Types::UserType, null: false
 
-    def user(id:)
-      User.find(id)
+    def user
+      User.last
     end
 
     def page(id:)

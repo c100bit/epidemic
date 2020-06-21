@@ -38,7 +38,7 @@
 
 RSpec.describe User, type: :model do
   describe 'email validations' do
-    let(:admin) { build(:admin_user, email: email) }
+    let(:admin) { build(:user, email: email) }
 
     context 'when email is valid eng' do
       let(:email) { 'abuse@yandex.ru' }
@@ -56,6 +56,7 @@ RSpec.describe User, type: :model do
       let(:email) { 'эпидемии-нет@тестовая-зона.рф' }
 
       it { expect(admin.valid?).to eq(true) }
+      it { expect(admin.save!).to eq(true) }
     end
 
     context 'when email is invalid rus' do
