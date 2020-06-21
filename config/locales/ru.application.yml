@@ -97,3 +97,10 @@ ru:
         updated_at: Дата обновления
         author: Автор
         resource: Ресурс
+      user:
+        first_name: Имя
+        last_name: Фамилия
+        middle_name: Отчество
+        phone: Телефон
+        address: Адрес
+        allow_password_change: Разрешено сбрасывать пароль
