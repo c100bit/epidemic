@@ -23,7 +23,7 @@ module Root
     field :user, Types::UserType, null: false
 
     def user
-      User.last
+      context[:current_user]
     end
 
     def page(id:)

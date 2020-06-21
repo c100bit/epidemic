@@ -11,15 +11,25 @@ module Seeds
                    password: 'олег@тестовая-зона.рф',
                    password_confirmation: 'олег@тестовая-зона.рф')
 
-      User.create!(email: 'мария@тестовая-зона.рф',
-                   uid: 'мария@тестовая-зона.рф',
-                   first_name: 'Мария',
+      User.create!(email: 'олег@тестовая-зона.рф',
+                   uid: 'олег@тестовая-зона.рф',
+                   first_name: 'Олег',
+                   last_name: 'Иванов',
+                   phone: '9600000000',
+                   address: 'Москва, ул. Тверская, 10',
+                   middle_name: 'Петрович',
+                   password: 'олег@тестовая-зона.рф',
+                   password_confirmation: 'олег@тестовая-зона.рф')
+
+      User.create!(email: 'c100bit@gmail.com',
+                   uid: 'c100bit@gmail.com',
+                   first_name: 'c100bit@gmail.com',
                    last_name: 'Петрова',
                    phone: '9600000001',
                    address: 'Санкт-Петербург, ул. Тверская, 10',
                    middle_name: 'Ивановна',
-                   password: 'мария@тестовая-зона.рф',
-                   password_confirmation: 'мария@тестовая-зона.рф')
+                   password: 'c100bit@gmail.com',
+                   password_confirmation: 'c100bit@gmail.com')
 
       AdminUser.create!(email: 'админ@тестовая-зона.рф',
                         password: 'админ@тестовая-зона.рф',
